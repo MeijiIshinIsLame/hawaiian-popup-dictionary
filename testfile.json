@@ -1,0 +1,744 @@
+{
+    "data": [{
+        "id": 1,
+        "word": "A",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "Name of a large sea bird often caught by natives; also called aaianuheakane, feathers white.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 2,
+        "word": "A",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "Name of a small fish that bites at a hook; called also aakimakau.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 3,
+        "word": "A",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "Name of broken lava from the volcano; probably so called from being burnt. See A.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 4,
+        "word": "A",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "Name of the Hawaiian alphabet; also the first sheet on which it was printed.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 5,
+        "word": "A",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "Name of the white spots that appear in poi when pounding.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 6,
+        "word": "A",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "The jawbone; the cheek bone. A lana, upper jaw; a lalo, lower jaw.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 7,
+        "word": "A",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "The name of an instrument made of smooth bone, and used formerly for piercing or killing an unborn child. It was called the a oo, the piercing a; also a koholua. See KOHOLUA.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 8,
+        "word": "A",
+        "definitions": [{
+            "ps": "v",
+            "dtxt_num": 1,
+            "dtxt": "To burn, as a fire; ua a mai ke ahi, the fire burns; ua a mai ke ahi ma ka waha. the fire burned in their mouths.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 2,
+            "dtxt": "To burn, as a lamp; to blaze, as a flame.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 3,
+            "ul": "Fig.",
+            "dtxt": "To burn, as jealousy. As anger.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 4,
+            "dtxt": "Hoo or ho. To cause to burn, i.e., to kindle; to light, as a lamp; to kindle, as a fire. Also with ho doubled, as hohoa, to dry; na hua i hohoa ia, dried fruits. See the reduplicate form AA and Hoo. Gram. § 212.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 9,
+        "word": "a",
+        "definitions": [{
+            "ps": "adj",
+            "dtxt_num": 1,
+            "dtxt": "Fiery; burning; he lua a, a fiery pit.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 10,
+        "word": "a",
+        "definitions": [{
+            "ps": "adv",
+            "dtxt_num": 1,
+            "dtxt": "When; then; there; until. With verbs in a narrative tense, it signifies when, and when, etc.; as, a hiki mai ia, when he arrived. With nei it signifies a designation of place, as mai a nei aku, from here (this place) onward. Until, as noho oia malaila a make, he lived there until he died.",
+            "def_src": "[LA]"
+        }, {
+            "ps": "conj",
+            "dtxt_num": 2,
+            "dtxt": "And; and then; and when. When it connects verbs, it usually stands by itself; as, holo ka waa, a komo iho, the canoe sailed and sank. When it connects nouns, it is usually joined with me; as, haawi mai oia i ka ai a me ke kapa, he furnished food and clothing. A with me signifies and, and also, besides, together with, etc. When emphatic, it is merely a disjunctive.",
+            "def_src": "[LA]"
+        }, {
+            "ps": "interj",
+            "dtxt_num": 3,
+            "dtxt": "Lo; behold. It is expressive of surprise, disappointment, astonishment or admiration. It is similar in meaning to aia hoi, eia hoi, aia ka.",
+            "def_src": "[LA]"
+        }, {
+            "ps": "prep",
+            "dtxt_num": 4,
+            "dtxt": "Of; to; in connection with motion, e hoi oe a ka hale, return to the house, (hiki i) understood. Laieik. 12. Unto; at; belonging. It designates the properties of relation, possession and place; and is often synonymous with o, but more generally distinct, giving another shade of meaning and implying a more close connection. Gram. § 69, 3.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 11,
+        "word": "a",
+        "definitions": [{
+            "dtxt_num": 1,
+            "ul": "Var.",
+            "dtxt": "And, when, until, to, etc.",
+            "def_src": "[MK]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 12,
+        "word": "a",
+        "definitions": [{
+            "der": "[PPN ʻa]",
+            "def_src": "[PE]",
+            "dtxt": "Of, acquired by. This a forms part of the possessives, as in ka'u, mine, and kāna, his. (Gram. 9.6.1)",
+            "example_txt": [{
+                "txt": "ʻUmi-a-Līloa",
+                "type": "extxt"
+            }, {
+                "txt": "ʻUmi, [son] of Līloa",
+                "type": "extran"
+            }, {
+                "txt": "Haleakalā",
+                "type": "extxt"
+            }, {
+                "txt": "house acquired [or used] by the sun [mountain name]",
+                "type": "extran"
+            }],
+            "dtxt_num": 1,
+            "ps": "prep"
+        }, {
+            "def_src": "[PE]",
+            "dtxt": "Abbreviation of ʻākau, north, as in surveying reports.",
+            "dtxt_num": 2,
+            "ps": "nvs",
+            "ul": "Cap."
+        }],
+        "pronunciation": null
+    }, {
+        "id": 13,
+        "word": "ʻa",
+        "definitions": [{
+            "dtxt_num": 1,
+            "der": "[PNP kaa-]",
+            "dtxt": "Prefix to numbers from one through nine, especially for counting in series. See ʻalua, ʻakolu, Pōʻahā. (Gram. 10.3)",
+            "def_src": "[PE]"
+        }, {
+            "dtxt_num": 2,
+            "dtxt": "Same as ʻā-.",
+            "def_src": "[PE]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 14,
+        "word": "ā",
+        "definitions": [{
+            "der": "[PCP aa]",
+            "def_src": "[PE]",
+            "dtxt": "Jaw, cheekbone. Fig. To talk a lot, jabber, jibber jabber. Ke ā nui, ke ā iki, big jaw, little jaw [bragging and wheedling, as of a man seeking the favor of a woman]. hoʻā To talk a lot, jabber.",
+            "dtxt_num": 1,
+            "ps": "nvi"
+        }, {
+            "ps": "n",
+            "dtxt_num": 2,
+            "dtxt": "An instrument made of smooth bone, formerly used for abortion, lancing, or bleeding. Also ā ʻōʻō, piercing ā.",
+            "def_src": "[PE]"
+        }, {
+            "ps": "nvs",
+            "dtxt_num": 3,
+            "dtxt": "Mold found in souring foods, especially poi, generally known as Oidium lactis or Oospora lactis, but now called Geotrichum candidum.",
+            "def_src": "[PE]"
+        }, {
+            "der": "[PCP a]",
+            "def_src": "[PE]",
+            "dtxt": "And prep. When, at the time when, until, to, as far as, and, or (rare), and then, but (usually preceding verbs, whereas a me usually precedes nouns; ā may also connect words translated by English adjectives, as he poʻe kuli ā ʻāʻā, a people deaf and dumb; nani ā pumehana kēia kakahiaka, this morning is beautiful and warm). (Gram. 9.5, 11.1) Ā also connects verb + noun compounds: see ʻai ā manō, holoāiʻa, Gram. 8.7.2. Ā hiki mai ia, when he arrives. Hola ʻelua ā ʻoi, a little after two o'clock. Noho ʻoia malaila ā make, he lived there until death. Prolonged ā may designate a protracted period of time or distance, a long continued action, or emphasis. Aloha ā nui, much, much aloha. Mahalo ā nui, thanks very, very much. Holo aʻela ia ā hiki i ka ʻāina kahiki, he sailed and sailed and sailed until he reached a foreign couentry. Hele ā uka, go clear to the uplands.",
+            "dtxt_num": 4,
+            "ps": "conj"
+        }, {
+            "dtxt_num": 1,
+            "dtxt": "Iwi ā. Jawbone, mandible.",
+            "def_src": "[MK]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 15,
+        "word": "ā",
+        "definitions": [{
+            "dtxt_num": 1,
+            "der": "[PPN -haʻa; cf. Tonga kaihaʻa ‘steal’]",
+            "dtxt": "Pejorative suffix, often written wā after o or u. See ʻaiā, haiā, hainā, huā (huwā), kauā (kauwā), lonoā, (lonowā), makoeā, naʻauʻauā (naʻauʻauwā), poluā (poluwā), Gram. 6.5.",
+            "def_src": "[PE]"
+        }, {
+            "dtxt_num": 2,
+            "der": "[PPN (ʻ)a]",
+            "dtxt": "Personal article occurring only after the preposition i, written ia. (Gram. 9.3.1)",
+            "def_src": "[PE]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 16,
+        "word": "ā",
+        "definitions": [{
+            "dtxt_num": 1,
+            "der": "[PPN aa]",
+            "dtxt": "Simulative ligature in the sequence ‘verb + noun’ compounds. See ʻai ā manō, holoāiʻa, Gram. 8.7.2.",
+            "def_src": "[PE]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 17,
+        "word": "ā",
+        "definitions": [{
+            "dtxt_num": 1,
+            "dtxt": "A word used only at the end of a sentence or phrase, with meanings such as: I told you so; don't you forget it; you should know; you dummy. Ua hoʻomaka ka papa i ka hola ʻehiku, ā. The class started at seven o'clock, you dummy. Niʻihau.",
+            "def_src": "[MK]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 82,
+        "word": "ʻaʻahuki",
+        "definitions": [{
+            "der": "[Lit. pulled vein]",
+            "def_src": "[PE]",
+            "dtxt": "Tendon. See ex., wikani.",
+            "dtxt_num": 1,
+            "ps": "n"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 83,
+        "word": "ʻaʻahu koa",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "Military uniform; also written ʻaʻahu koa.",
+            "def_src": "[KK]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 612,
+        "word": "ʻaiāhua",
+        "definitions": [{
+            "dtxt_num": 1,
+            "dtxt": "Same as ʻaiā.",
+            "def_src": "[PE]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 18,
+        "word": "ʻā",
+        "definitions": [{
+            "der": "[PPN kakaha, PNP kaa]",
+            "def_src": "[PE]",
+            "dtxt": "Fiery, burning; fire; to burn, blaze. Fig. To glitter or sparkle, as a gem; to burn, as with jealousy or anger.",
+            "example_txt": [{
+                "txt": "ʻā akaaka",
+                "type": "extxt"
+            }, {
+                "txt": "to shine brightly, as stars",
+                "type": "extran"
+            }, {
+                "txt": "ʻĀ ke kaimana.",
+                "type": "extxt"
+            }, {
+                "txt": "The diamond sparkles.",
+                "type": "extran"
+            }],
+            "dtxt_num": 1,
+            "ps": "nvi"
+        }, {
+            "dtxt_num": 1,
+            "example_txt": [{
+                "txt": "Ua hoʻā ʻia kona inaina.",
+                "type": "extxt"
+            }, {
+                "txt": "His anger was aroused.",
+                "type": "extran"
+            }, {
+                "txt": "hoʻā imu",
+                "type": "extxt"
+            }, {
+                "txt": "to light an oven; one who lights an oven",
+                "type": "extran"
+            }],
+            "syn": "►  hoʻā",
+            "dtxt": "To set on fire, burn, ignite; to light, as a lamp. Fig. To incite, arouse.",
+            "def_src": "[PE]"
+        }, {
+            "ps": "nvi",
+            "dtxt_num": 2,
+            "dtxt": "Aa lava, or lava rock, as distinguished from smooth unbroken pāhoehoe lava (formerly preceded by ke); to flow, as aa lava.",
+            "def_src": "[PE]"
+        }, {
+            "dtxt_num": 3,
+            "example_txt": [{
+                "txt": "ʻAʻole ʻoia i ʻā e noho.",
+                "type": "extxt"
+            }, {
+                "txt": "He did not dare to stay.",
+                "type": "extran"
+            }],
+            "dtxt": "Same as ʻaʻa 1, to dare.",
+            "def_src": "[PE]"
+        }, {
+            "ps": "n",
+            "dtxt_num": 4,
+            "dtxt": "Red-footed booby bird (Sula sula rubripes), brown booby (Sula leucogaster plotus), masked or blue-faced booby (Sula dactylatra personata); all indigenous and also breeding elsewhere. Also ʻaʻa. Legendary birds believed to have taken the shape of this bird are ʻā ʻaia, ʻāʻaiʻanuheakāne and ʻāʻaianuinūkeu; ʻā by some were considered ʻaumākua. See also Kep. 33.",
+            "def_src": "[PE]"
+        }, {
+            "ps": "n",
+            "dtxt_num": 5,
+            "dtxt": "Young stage of damselfish (ʻāloʻiloʻi). Also ʻaʻā. ʻĀ ʻaki maunu, bait-taking ʻā [said of petty thieves; a var. phrase is ʻā ʻaki makau, hook-taking ʻā].",
+            "def_src": "[PE]"
+        }, {
+            "der": "[PNP kaa]",
+            "def_src": "[PE]",
+            "dtxt": "Oh! Well! Ah! Er … (Gram. 12)",
+            "dtxt_num": 6,
+            "ps": "interj"
+        }, {
+            "ps": "vt",
+            "dtxt_num": 7,
+            "dtxt": "To drive, as fish or cattle.",
+            "def_src": "[PE]"
+        }, {
+            "dtxt_num": 1,
+            "syn": "►  hoʻā",
+            "dtxt": "Caus/sim.",
+            "def_src": "[PE]"
+        }, {
+            "der": "[Eng]",
+            "def_src": "[PE]",
+            "dtxt": "The letter “a.”",
+            "dtxt_num": 8,
+            "ps": "n"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 19,
+        "word": "ʻā",
+        "definitions": [{
+            "dtxt_num": 1,
+            "der": "[PNP kaa-]",
+            "dtxt": "In the nature of (as hina, white, ʻāhina, somewhat white, gray; pali, cliff, ʻāpali, like a cliff). There are many examples, as ʻālewalewa, ʻālualua, ʻāmokumoku, ʻāoʻo, ʻāpono, ʻāwela. (Gram. 6.3.1)",
+            "def_src": "[PE]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 20,
+        "word": "ʻā",
+        "definitions": [{
+            "der": "[Dic., ext. mng]",
+            "def_src": "[MK]",
+            "dtxt": "Active, as a volcano.",
+            "example_txt": [{
+                "txt": "lua pele ʻā",
+                "type": "extxt"
+            }, {
+                "txt": "active volcano",
+                "type": "extran"
+            }],
+            "dtxt_num": 1,
+            "ps": "vs"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 21,
+        "word": "ʻā-",
+        "definitions": [{
+            "dtxt_num": 1,
+            "der": "[PNP kaa-]",
+            "dtxt": "In the nature of (as hina, white, ʻāhina, somewhat white, gray; pali, cliff, ʻāpali, like a cliff). There are many examples, as ʻālewalewa, ʻālualua, ʻāmokumoku, ʻāoʻo, ʻāpono, ʻāwela. (Gram. 6.3.1)",
+            "def_src": "[PE]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 22,
+        "word": "AA",
+        "definitions": [{
+            "ps": "adj",
+            "dtxt_num": 1,
+            "dtxt": "Burning; raging, as a fire, he ahi aa loa; also as anger.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 23,
+        "word": "AA",
+        "definitions": [{
+            "ps": "adj",
+            "dtxt_num": 1,
+            "dtxt": "Silent; still; lonely, as a house uninhabited; he aa ko ka hale, the people of the house are silent.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 24,
+        "word": "AA",
+        "definitions": [{
+            "ps": "adj",
+            "dtxt_num": 1,
+            "dtxt": "Spiteful; quick angry; also roguish; mischievous.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 25,
+        "word": "AA",
+        "definitions": [{
+            "ps": "adj",
+            "dtxt_num": 1,
+            "dtxt": "Stony; abounding with lava; rough with broken lava, as ground to walk over, or to work in. See A, broken lava, above.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 26,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "A belt; a girdle.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 27,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "A burning; a lighted fire, etc. Laieik. 78.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 28,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "A covering for the eyes.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 29,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "A daring; tempting.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 30,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "A dwarf; a small person. Kanaka poupou aa; ua ike an i kahi keiki i komoiii, aa no hoi ke kino.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 31,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "A pocket; a bag. SYN. with eke. Aa moni, a purse; a scrip; a bag to carry provisions in for a journey; aole kanaka aa ole, no man without his scrip; a bag for weights (of money). The name of the envelop for a fœtus. Laieik. 190. Kuu kaikaina i ka aa hookahi.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 32,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "Chaff; hulls; the outside of seeds or fruit.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 33,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "Dumbness; inability to speak intelligibly; also a dumb person. I loheia e na aa lololohe; i mau aa lolo kuli.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 34,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "Name of a reddish fish. See A above.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 35,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "Name of a sea breeze at Lahaina and some other places on the islands.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 36,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "Name of the cloth-like covering near the roots of cocoanut leaves, aa niu. Hence,",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 2,
+            "dtxt": "The name of a coarse land of cloth, he aa haole.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 3,
+            "dtxt": "The outer husk of the cocoanut; the skin of the banana, same as paaa.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 37,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "See A above. Broken lava, i.e., sand, earth, stones and melted lava, cooled and broken up; hence.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 38,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "See A above. Name of a bird that hunts fish during the day, but flies back to the mountains in the evening.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 39,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "The caul of animals; aa maluna o ke eke, the caul above the liver. The midriff:",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 40,
+        "word": "AA",
+        "definitions": [{
+            "ps": "n",
+            "dtxt_num": 1,
+            "dtxt": "The small roots of trees or plants. Also called weli.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 2,
+            "dtxt": "The veins or arteries for blood, from their resemblance to the fine roots of trees, aole lakou i ike ke koko maloko o na aa. Anat. 1.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 3,
+            "ul": "Fig.",
+            "dtxt": "The lower part of the neck.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 4,
+            "dtxt": "Offspring.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 41,
+        "word": "AA",
+        "definitions": [{
+            "ps": "v",
+            "dtxt_num": 1,
+            "dtxt": "A doubled. See A, verb, before. To burn fiercely or furiously, as a fire; to burn constantly.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 2,
+            "ul": "Fig.",
+            "dtxt": "To kindle; to burn furiously, as anger.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 3,
+            "dtxt": "Hoo. To cause to kindle; to burn, as a fire; to light, as a lamp.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 4,
+            "ul": "Fig.",
+            "dtxt": "To burn, as anger.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 5,
+            "dtxt": "To rage; to be angry.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 42,
+        "word": "AA",
+        "definitions": [{
+            "ps": "v",
+            "dtxt_num": 1,
+            "dtxt": "To be bold; to dare.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 2,
+            "dtxt": "To tempt; to challenge. To defy.",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 3,
+            "dtxt": "To venture, ua aa anei oe e hele i ke kaua? Ua aa anei oe e hele i ke alii?",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 4,
+            "dtxt": "To accept a challenge; to act presumptuously. He aa ka manao; he wiwo ole.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 43,
+        "word": "AA",
+        "definitions": [{
+            "ps": "v",
+            "dtxt_num": 1,
+            "dtxt": "To gird; tie around, as a loose garment.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 44,
+        "word": "AA",
+        "definitions": [{
+            "ps": "v",
+            "dtxt_num": 1,
+            "dtxt": "To make a noise, as in trying to speak, as a dumb person; hence,",
+            "def_src": "[LA]"
+        }, {
+            "dtxt_num": 2,
+            "dtxt": "To be dumb, ua aa ka leo.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 45,
+        "word": "AA",
+        "definitions": [{
+            "ps": "v",
+            "dtxt_num": 1,
+            "dtxt": "To send love in compliment; as. e aa mai ana o mea ma ia oe; the answer would be, Anoai wale laua, or welina wale laua, or aloha wale laua.",
+            "def_src": "[LA]"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 295,
+        "word": "ʻAhaʻaina Pelena",
+        "definitions": [{
+            "der": "[Lit. feast of bread]",
+            "def_src": "[PE]",
+            "dtxt": "Holy Communion.",
+            "dtxt_num": 1,
+            "ps": "n"
+        }],
+        "pronunciation": null
+    }, {
+        "id": 46,
+        "word": "ʻaʻa",
+        "definitions": [{
+            "ps": "vt",
+            "dtxt_num": 1,
+            "dtxt": "To brave, dare, challenge, defy, check, venture; to accept a challenge; to volunteer, involving a difficulty; to act wickedly or presumptuously; bold, venturesome, valiant, intrepid. See ex., mea 1. He poʻe ʻaʻa hewa, a people acting wickedly. He ʻaʻa ka manaʻo, he wiwo ʻole, thoughts are full of courage, fearless.",
+            "def_src": "[PE]"
+        }, {
+            "ps": "nvt",
+            "dtxt_num": 2,
+            "dtxt": "Belt, girdle, waist; to gird, tie on. Kākiʻi maila ʻo Kahakaloa i kāna laʻau pālau, a loaʻa ihola ka ʻaʻa o Kawelo (FS 89), Kahakaloa brandished his war club so as to reach Kawelo’s waist.",
+            "def_src": "[PE]"
+        }, {
+            "der": "[PPN kaka]",
+            "def_src": "[PE]",
+            "dtxt": "Bag, pocket, caul, envelope for a fetus, scrip; fiber from coconut husk; cloth-like sheath at base of coconut frond; cloth; chaff, hull; skin covering eyeballs. See ʻaʻa moni. ʻAʻa haole, foreign cloth. ʻAʻa maluna o ke ake, caul above the liver. Ka ʻaʻa o ke au ma ke akepaʻa, the caul of the bile and the liver. ʻAʻole kanaka ʻaʻa ʻole, no man without his scrip.",
+            "dtxt_num": 3,
+            "ps": "n"
+        }, {
+            "dtxt_num": 4,
+            "ul": "Cap.",
+            "dtxt": "Same as Maʻaʻa, a wind.",
+            "def_src": "[PE]"
+        }, {
+            "dtxt_num": 5,
+            "dtxt": "Same as ʻā 4, booby bird.",
+            "def_src": "[PE]"
+        }],
+        "pronunciation": null
+    }]
+}

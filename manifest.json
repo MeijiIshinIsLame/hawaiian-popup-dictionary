@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Hawaiian Dictionary",
+  "version": "1.0",
+
+  "description": "Popup dictionary for hawaiian words",
+
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "ftp://*/*", "file:///*"],
+      "js": ["dictionary.js"]
+    }
+  ],
+  "web_accessible_resources": [{"resources": ["testfile.json"], "matches": ["<all_urls>"]}]
+}
