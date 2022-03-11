@@ -1,10 +1,12 @@
 var popupVisible = false;
 
+//gets JSON dict as promise
 async function fetchJSONDict() {
     let response = await fetch(chrome.runtime.getURL('./dictionary.json'));
     return response;
 }
 
+//searches for word and returns dictionary entries for word
 async function searchWord(word) {
     defenitions = [];
     word = word.toLowerCase();
@@ -16,31 +18,40 @@ async function searchWord(word) {
          if (dictInJSON["data"][i]["word"].toLowerCase() == word){
             for (var j = 0; j < dictInJSON["data"][i]["definitions"].length; j++)
             defenitions.push(dictInJSON["data"][i]["definitions"][j]["dtxt"]);
-  }
-}
+        }
+    }
 return defenitions
 }
 
 function insertPopupDict() {
-    var selection = "";
-    range = "";
     if (window.getSelection) {
-        selection = window.getSelection();
-        text = selection.toString();
-        range = selection.getRangeAt(0);
+        //this is the highlighted text
+        let selection = window.getSelection();
+        var text = selection.toString();
+        var range = selection.getRangeAt(0);
+
+        //this is the solution to the highlight problem
+        var newRange = document.createRange();
+        newRange.setStart(selection.focusNode, selection.startOffset);
 
 		var popupDictionaryWindow = document.createElement('span');
         popupDictionaryWindow.id = 'hawaiian-popup-dictionary'
-		popupDictionaryWindow.style = 'margin-top: 35px; width: 360px;background-color: #555;color: #fff;text-align: center;border-radius: 6px;padding: 8px 0;position: absolute;z-index: 1;';
-		searchWord(text).then(defenitions => {
-			popupDictionaryWindow.innerHTML = text + "<hr><br>";
+		popupDictionaryWindow.style = 'margin-top: 35px; width: 360px;font-size: 14px; background-color: #555;color: #fff;border-radius: 6px;padding: 8px 0;position: absolute;z-index: 1;';
+
+        //show word and defenitions
+        searchWord(text).then(defenitions => {
+			popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
             for (var i = 0; i < defenitions.length; i++) {
-                popupDictionaryWindow.innerHTML += defenitions[i] + "<br><br>"
+                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + defenitions[i] + "</li>"
+
+                //just an asthetic thing for now
+                if (i == 3) {break;}
             }
-			range.insertNode(popupDictionaryWindow);
+            popupDictionaryWindow.innerHTML += "</ul>"
+            //place node at newRange instead of range
+			newRange.insertNode(popupDictionaryWindow);
 		});
         popupVisible = true;
-        document.getSelection().removeAllRanges();
     }
 }
 
