@@ -36,7 +36,7 @@ function insertPopupDict() {
 
 		var popupDictionaryWindow = document.createElement('span');
         popupDictionaryWindow.id = 'hawaiian-popup-dictionary'
-		popupDictionaryWindow.style = 'margin-top: 35px; width: 360px;font-size: 14px; background-color: #555;color: #fff;border-radius: 6px;padding: 8px 0;position: absolute;z-index: 1;';
+		popupDictionaryWindow.style = 'margin-top: 35px; width: 360px;font-size: 14px;font-family: Arial, Helvetica, sans-serif; background-color: #555;color: #fff;border-radius: 6px;padding: 8px 0;position: absolute;z-index: 1;';
 
         //show word and defenitions
         searchWord(text).then(defenitions => {
