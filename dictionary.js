@@ -2,7 +2,7 @@ var popupVisible = false;
 
 //gets JSON dict as promise
 async function fetchJSONDict() {
-    let response = await fetch(chrome.runtime.getURL('./dictionary.json'));
+    let response = await fetch(chrome.runtime.getURL('./dictionary2.json'));
     return response;
 }
 
@@ -15,6 +15,7 @@ async function searchWord(word) {
     let data = await response.text();
     var dictInJSON = JSON.parse(data);
     for (var i = 0; i < dictInJSON["data"].length; i++){
+        console.log(dictInJSON["data"][i]["word"])
          if (dictInJSON["data"][i]["word"].toLowerCase() == word){
             for (var j = 0; j < dictInJSON["data"][i]["definitions"].length; j++)
             defenitions.push(dictInJSON["data"][i]["definitions"][j]["dtxt"]);

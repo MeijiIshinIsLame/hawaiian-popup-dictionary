@@ -13,5 +13,5 @@
       "css":["style.css"]
     }
   ],
-  "web_accessible_resources": [{"resources": ["dictionary.json"], "matches": ["<all_urls>"]}]
+  "web_accessible_resources": [{"resources": ["dictionary2.json"], "matches": ["<all_urls>"]}]
 }
