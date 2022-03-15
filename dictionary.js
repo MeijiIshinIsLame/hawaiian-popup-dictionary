@@ -56,11 +56,11 @@ function insertPopupDict() {
             }
             //place node at newRange instead of range
 			newRange.insertNode(popupDictionaryWindow);
-                
+
             if (definitions.length >= 3) {
                     document.addEventListener('keydown', nextPage);
                     document.addEventListener('keydown', prevPage);
-                    popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'>More definitions --></p>"
+                    popupDictionaryWindow.innerHTML += "<hr><a style='padding: 10px;' onClick='nextPage();'>More definitions --></a>"
                     console.log("nextpage");
                     function nextPage(e) {
                         console.log(definitions.length)
@@ -81,7 +81,7 @@ function insertPopupDict() {
                         }
                     }
                     function prevPage(e) {
-                        if (e.keycode === 37 || e.charCode === 37) {
+                        if (e.keyCode === 37 || e.charCode === 37) {
                             console.log("left pressed");
                             var lastMaxLength = maxLength;
                             if (definitions.length - maxLength >= 3) {
