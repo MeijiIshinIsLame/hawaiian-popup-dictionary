@@ -8,20 +8,20 @@ async function fetchJSONDict() {
 
 //searches for word and returns dictionary entries for word
 async function searchWord(word) {
-    defenitions = [];
+    definitions = [];
     word = word.toLowerCase();
 
     let response = await fetchJSONDict();
     let data = await response.text();
     var dictInJSON = JSON.parse(data);
+
     for (var i = 0; i < dictInJSON["data"].length; i++){
-        console.log(dictInJSON["data"][i]["word"])
          if (dictInJSON["data"][i]["word"].toLowerCase() == word){
             for (var j = 0; j < dictInJSON["data"][i]["definitions"].length; j++)
-            defenitions.push(dictInJSON["data"][i]["definitions"][j]["dtxt"]);
+            definitions.push(dictInJSON["data"][i]["definitions"][j]["dtxt"]);
         }
     }
-return defenitions
+    return definitions
 }
 
 function insertPopupDict() {
@@ -39,18 +39,66 @@ function insertPopupDict() {
         popupDictionaryWindow.id = 'hawaiian-popup-dictionary'
 		popupDictionaryWindow.style = 'margin-top: 35px; width: 360px;font-size: 14px;font-family: Arial, Helvetica, sans-serif; background-color: #555;color: #fff;border-radius: 6px;padding: 8px 0;position: absolute;z-index: 1;';
 
-        //show word and defenitions
-        searchWord(text).then(defenitions => {
+        //show word and definitions
+        searchWord(text).then(definitions => {
 			popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
-            for (var i = 0; i < defenitions.length; i++) {
-                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + defenitions[i] + "</li>"
 
-                //just an asthetic thing for now
-                if (i == 3) {break;}
+            var maxLength;
+            if (definitions.length < maxLength) {
+                maxLength = definitions.length
             }
-            popupDictionaryWindow.innerHTML += "</ul>"
+            else {
+                maxLength = 3;
+            }
+
+            for (var i = 0; i < maxLength; i++) {
+                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
+            }
             //place node at newRange instead of range
 			newRange.insertNode(popupDictionaryWindow);
+                
+            if (definitions.length >= 3) {
+                    document.addEventListener('keydown', nextPage);
+                    document.addEventListener('keydown', prevPage);
+                    popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'>More definitions --></p>"
+                    console.log("nextpage");
+                    function nextPage(e) {
+                        console.log(definitions.length)
+                        if(e.keyCode === 39 || e.charCode === 39) {
+                            var lastMaxLength = maxLength;
+                            if (definitions.length - maxLength <= 3) {
+                                maxLength += 3;
+                            }
+                            else {
+                                maxLength = definitions.length;
+                            }
+                            console.log(`maxlength ${maxLength} | i ${i}`);
+                            for (var i = lastMaxLength; i < maxLength; i++) {
+                                //wipe defs then update page
+                                popupDictionaryWindow.innerHTML = ""
+                                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
+                            }
+                        }
+                    }
+                    function prevPage(e) {
+                        if (e.keycode === 37 || e.charCode === 37) {
+                            console.log("left pressed");
+                            var lastMaxLength = maxLength;
+                            if (definitions.length - maxLength >= 3) {
+                                maxLength -= 3;
+                            }
+                            else{
+                                maxLength = definitions.length;
+                            }
+                            console.log(`maxlength ${maxLength} | i ${i}`);
+                            for (var i = lastMaxLength; i < maxLength; i++) {
+                                //wipe defs then update page
+                                popupDictionaryWindow.innerHTML = ""
+                                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
+                            }
+                        }
+                    }
+                }
 		});
         popupVisible = true;
     }
@@ -73,8 +121,8 @@ function shiftDowned(e) {
         }
         else {
             insertPopupDict();
+        }
     }
-}
 }
 
 document.addEventListener('keydown', shiftDowned);
