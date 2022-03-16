@@ -1,4 +1,7 @@
 var popupVisible = false;
+const RIGHTARROW = 39;
+const LEFTARROW = 37;
+const SHIFT = 16;
 
 //gets JSON dict as promise
 async function fetchJSONDict() {
@@ -43,9 +46,10 @@ function insertPopupDict() {
         searchWord(text).then(definitions => {
 			popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
 
+			//maxlength is for pagination. If defs length more than 3 then we set the max length to 3 and incriment as we flip through pages.
             var maxLength;
             if (definitions.length < maxLength) {
-                maxLength = definitions.length
+                maxLength = definitions.length;
             }
             else {
                 maxLength = 3;
@@ -54,48 +58,77 @@ function insertPopupDict() {
             for (var i = 0; i < maxLength; i++) {
                 popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
             }
-            //place node at newRange instead of range
+            //place node at newRange instead of range. This is coordinates of popup dict.
 			newRange.insertNode(popupDictionaryWindow);
 
+			//if def length > 3 then add pagination functions
             if (definitions.length >= 3) {
                     document.addEventListener('keydown', nextPage);
                     document.addEventListener('keydown', prevPage);
-                    popupDictionaryWindow.innerHTML += "<hr><a style='padding: 10px;' onClick='nextPage();'>More definitions --></a>"
-                    console.log("nextpage");
+                    popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'>Next Page--></p>"
+
+					var prevPageExists = false;
+					var lastMaxLength;
+					var noNextPage;
+					
                     function nextPage(e) {
-                        console.log(definitions.length)
-                        if(e.keyCode === 39 || e.charCode === 39) {
-                            var lastMaxLength = maxLength;
-                            if (definitions.length - maxLength <= 3) {
+                        if(e.keyCode === RIGHTARROW || e.charCode === RIGHTARROW) {
+                            lastMaxLength = maxLength;
+							//3 more pages
+                            if (definitions.length - maxLength >= 3) {
                                 maxLength += 3;
                             }
+							//only goes up to length. This is for when the rest of the entries are less than 3.
                             else {
                                 maxLength = definitions.length;
+								noNextPage = true;
                             }
-                            console.log(`maxlength ${maxLength} | i ${i}`);
+							//reset the html to just the word text, then add defs.
+							popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
                             for (var i = lastMaxLength; i < maxLength; i++) {
-                                //wipe defs then update page
-                                popupDictionaryWindow.innerHTML = ""
                                 popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
                             }
+							//since we went up one page, we set the prevpageexissts to true so we can go back
+							prevPageExists = true;
+							if (noNextPage) {
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page</p;"
+							}
+							else {
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page | Next Page--></p;"
+							}
                         }
                     }
                     function prevPage(e) {
-                        if (e.keyCode === 37 || e.charCode === 37) {
-                            console.log("left pressed");
-                            var lastMaxLength = maxLength;
-                            if (definitions.length - maxLength >= 3) {
-                                maxLength -= 3;
+                        if(e.keyCode === LEFTARROW || e.charCode === LEFTARROW) {
+							console.log(lastMaxLength);
+                            lastMaxLength = maxLength;
+							console.log(lastMaxLength);
+							//if there is prevpage, we actually need to go back 6 because maxlength will decrement as well
+                            if (prevPageExists) {
+								//need to add exception for when max is less than 3
+                                lastMaxLength -= 6;
+								maxLength -= 3;
                             }
-                            else{
-                                maxLength = definitions.length;
+                            else {
+								lastMaxLength -= 0;
+                                maxLength = 3;
+								prevPageExists = false;
                             }
-                            console.log(`maxlength ${maxLength} | i ${i}`);
+							popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
                             for (var i = lastMaxLength; i < maxLength; i++) {
-                                //wipe defs then update page
-                                popupDictionaryWindow.innerHTML = ""
                                 popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
                             }
+							
+							//if prevpage exists, be able to go back, else just do more pages
+							if (prevPageExists) {
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page | Next Page--></p>"
+							}
+							else {
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'>Next Page--></p>"
+							}
+							console.log("after")
+							console.log(maxLength);
+							console.log(lastMaxLength);
                         }
                     }
                 }
@@ -113,7 +146,7 @@ function getSelectionText() {
 }
 
 function shiftDowned(e) {
-    if(e.keyCode === 16 || e.charCode === 16){
+    if(e.keyCode === SHIFT || e.charCode === SHIFT){
         if (popupVisible) {
             var popupwindow = document.getElementById("hawaiian-popup-dictionary");
             popupwindow.remove();
