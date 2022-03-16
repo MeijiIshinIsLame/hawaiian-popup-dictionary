@@ -86,6 +86,7 @@ function insertPopupDict() {
 							//reset the html to just the word text, then add defs.
 							popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
                             for (var i = lastMaxLength; i < maxLength; i++) {
+								if (i < 0) break;
                                 popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
                             }
 							//since we went up one page, we set the prevpageexissts to true so we can go back
@@ -116,7 +117,8 @@ function insertPopupDict() {
                             }
 							popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
                             for (var i = lastMaxLength; i < maxLength; i++) {
-                                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
+								if (i < 0) break;
+                                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>";
                             }
 							
 							//if prevpage exists, be able to go back, else just do more pages
