@@ -47,17 +47,19 @@ function insertPopupDict() {
 			popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
 
 			//maxlength is for pagination. If defs length more than 3 then we set the max length to 3 and incriment as we flip through pages.
-            var maxLength;
-            if (definitions.length < maxLength) {
-                maxLength = definitions.length;
-            }
-            else {
-                maxLength = 3;
-            }
-
-            for (var i = 0; i < maxLength; i++) {
-                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
-            }
+            var currentPage = 1;
+			var defsPerPage = 3;
+			var maxPages = Math.ceil(definitions.length / defsPerPage);
+			
+			if (definitions.length > 0) {
+				for (var i = 0; i < defsPerPage; i++) {
+					if (definitions[i] == undefined) break;
+					popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>";
+				}
+			}
+			else {
+				popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>No definitions found.</li>";
+			}
             //place node at newRange instead of range. This is coordinates of popup dict.
 			newRange.insertNode(popupDictionaryWindow);
 
@@ -65,72 +67,55 @@ function insertPopupDict() {
             if (definitions.length >= 3) {
                     document.addEventListener('keydown', nextPage);
                     document.addEventListener('keydown', prevPage);
-                    popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'>Next Page--></p>"
-
-					var prevPageExists = false;
-					var lastMaxLength;
-					var noNextPage;
+                    popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'>Next Page--></p>";
 					
                     function nextPage(e) {
                         if(e.keyCode === RIGHTARROW || e.charCode === RIGHTARROW) {
-                            lastMaxLength = maxLength;
-							//3 more pages
-                            if (definitions.length - maxLength >= 3) {
-                                maxLength += 3;
-                            }
-							//only goes up to length. This is for when the rest of the entries are less than 3.
-                            else {
-                                maxLength = definitions.length;
-								noNextPage = true;
-                            }
-							//reset the html to just the word text, then add defs.
+                            
+							currentPage++;
+							
+							//validation
+							if (currentPage > maxPages) currentPage = maxPages;
+
 							popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
-                            for (var i = lastMaxLength; i < maxLength; i++) {
-								if (i < 0) break;
+                            for (var i = (currentPage-1) * defsPerPage; i < (currentPage * defsPerPage); i++) {
+								//if we get an undefined don't list anymore
+								if (definitions[i] == undefined) break;
                                 popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
                             }
-							//since we went up one page, we set the prevpageexissts to true so we can go back
-							prevPageExists = true;
-							if (noNextPage) {
-								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page</p;"
-							}
-							else {
+							//page buttons depending on if theres more defs or not
+							if (currentPage > 1 && currentPage < maxPages) {
 								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page | Next Page--></p;"
+							}
+							else  if (currentPage > 1){
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page</p;"
 							}
                         }
                     }
                     function prevPage(e) {
                         if(e.keyCode === LEFTARROW || e.charCode === LEFTARROW) {
-							console.log(lastMaxLength);
-                            lastMaxLength = maxLength;
-							console.log(lastMaxLength);
-							//if there is prevpage, we actually need to go back 6 because maxlength will decrement as well
-                            if (prevPageExists) {
-								//need to add exception for when max is less than 3
-                                lastMaxLength -= 6;
-								maxLength -= 3;
-                            }
-                            else {
-								lastMaxLength -= 0;
-                                maxLength = 3;
-								prevPageExists = false;
-                            }
-							popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
-                            for (var i = lastMaxLength; i < maxLength; i++) {
-								if (i < 0) break;
-                                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>";
-                            }
+							currentPage--;
 							
-							//if prevpage exists, be able to go back, else just do more pages
-							if (prevPageExists) {
-								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page | Next Page--></p>"
+							//validation
+							if (currentPage > maxPages) currentPage = maxPages;
+							if (currentPage < 1) currentPage = 1;
+
+							popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
+                            for (var i = (currentPage-1) * defsPerPage; i < (currentPage * defsPerPage); i++) {
+								//if we get an undefined don't list anymore
+								if (definitions[i] == undefined) break;
+                                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
+                            }
+							//page buttons depending on if theres more defs or not
+							if (currentPage > 1 && currentPage < maxPages) {
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page | Next Page--></p;";
+							}
+							else  if (currentPage > 1){
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page</p;";
 							}
 							else {
-								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'>Next Page--></p>"
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'>Next Page--></p>";
 							}
-							console.log("after")
-							console.log(maxLength);
-							console.log(lastMaxLength);
                         }
                     }
                 }

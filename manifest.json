@@ -9,8 +9,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*", "ftp://*/*", "file:///*"],
-      "js": ["dictionary.js"],
-      "css":["style.css"]
+      "js": ["dictionary.js"]
     }
   ],
   "web_accessible_resources": [{"resources": ["dictionary2.json"], "matches": ["<all_urls>"]}]
