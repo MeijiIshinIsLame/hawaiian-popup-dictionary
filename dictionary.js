@@ -41,7 +41,11 @@ function insertPopupDict() {
 
         //this is the solution to the highlight problem
         var newRange = document.createRange();
-        newRange.setStart(selection.focusNode, selection.startOffset);
+		try {
+			newRange.setStart(selection.focusNode, selection.focusOffset - 1);
+		} catch {
+			newRange.setStart(selection.focusNode, selection.anchorOffset);
+		}
 
 		popupDictionaryWindow = document.createElement('span');
         popupDictionaryWindow.id = 'hawaiian-popup-dictionary'
