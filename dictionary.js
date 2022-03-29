@@ -30,6 +30,8 @@ async function searchWord(word) {
     return definitions
 }
 
+
+//sooooo this is a big ugly function because chrome extensions force me to read files as a promise T_T
 function insertPopupDict() {
     if (window.getSelection) {
         //this is the highlighted text
@@ -55,6 +57,7 @@ function insertPopupDict() {
 			var defsPerPage = 3;
 			var maxPages = Math.ceil(definitions.length / defsPerPage);
 			
+			//initial dict entry population
 			if (definitions.length > 0) {
 				for (var i = 0; i < defsPerPage; i++) {
 					if (definitions[i] == undefined) break;
