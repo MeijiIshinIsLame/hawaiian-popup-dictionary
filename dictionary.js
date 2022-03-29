@@ -6,7 +6,7 @@ var popupDictionaryWindow;
 
 //gets JSON dict as promise
 async function fetchJSONDict() {
-    let response = await fetch(chrome.runtime.getURL('./dictionary2.json'));
+    let response = await fetch(chrome.runtime.getURL('./dictionaryDefinitions.json'));
     return response;
 }
 
