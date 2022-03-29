@@ -44,7 +44,7 @@ function insertPopupDict() {
 		try {
 			newRange.setStart(selection.focusNode, selection.focusOffset - 1);
 		} catch {
-			newRange.setStart(selection.focusNode, selection.anchorOffset);
+			newRange.setStart(selection.focusNode, selection.startOffset);
 		}
 
 		popupDictionaryWindow = document.createElement('span');
@@ -54,7 +54,7 @@ function insertPopupDict() {
 		
         //show word and definitions
         searchWord(text).then(definitions => {
-			popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
+			popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;font-family: Arial, Helvetica, sans-serif;'>" + text + "</b></p>";
 
 			//maxlength is for pagination. If defs length more than 3 then we set the max length to 3 and incriment as we flip through pages.
             var currentPage = 1;
@@ -65,11 +65,11 @@ function insertPopupDict() {
 			if (definitions.length > 0) {
 				for (var i = 0; i < defsPerPage; i++) {
 					if (definitions[i] == undefined) break;
-					popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>";
+					popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'>" + definitions[i] + "</li>";
 				}
 			}
 			else {
-				popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>No definitions found.</li>";
+				popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'>No definitions found.</li>";
 			}
             //place node at newRange instead of range. This is coordinates of popup dict.
 			newRange.insertNode(popupDictionaryWindow);
@@ -91,7 +91,7 @@ function insertPopupDict() {
             if (definitions.length >= 3) {
                     document.addEventListener('keydown', nextPage);
                     document.addEventListener('keydown', prevPage);
-                    popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'>Next Page--></p>";
+                    popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'>Next Page--></p>";
 					
                     function nextPage(e) {
                         if(e.keyCode === RIGHTARROW || e.charCode === RIGHTARROW) {
@@ -101,18 +101,18 @@ function insertPopupDict() {
 							//validation
 							if (currentPage > maxPages) currentPage = maxPages;
 
-							popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
+							popupDictionaryWindow.innerHTML = "<p style='text-align: center;;'><b style='font-size: 18px;font-family: Arial, Helvetica, sans-serif;'>" + text + "</b></p>";
                             for (var i = (currentPage-1) * defsPerPage; i < (currentPage * defsPerPage); i++) {
 								//if we get an undefined don't list anymore
 								if (definitions[i] == undefined) break;
-                                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
+                                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'>" + definitions[i] + "</li>"
                             }
 							//page buttons depending on if theres more defs or not
 							if (currentPage > 1 && currentPage < maxPages) {
-								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page | Next Page--></p;"
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'><-- Prev Page | Next Page--></p;"
 							}
 							else  if (currentPage > 1){
-								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page</p;"
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'><-- Prev Page</p;"
 							}
                         }
                     }
@@ -124,21 +124,21 @@ function insertPopupDict() {
 							if (currentPage > maxPages) currentPage = maxPages;
 							if (currentPage < 1) currentPage = 1;
 
-							popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;'>" + text + "</b></p>";
+							popupDictionaryWindow.innerHTML = "<p style='text-align: center;'><b style='font-size: 18px;font-family: Arial, Helvetica, sans-serif;'>" + text + "</b></p>";
                             for (var i = (currentPage-1) * defsPerPage; i < (currentPage * defsPerPage); i++) {
 								//if we get an undefined don't list anymore
 								if (definitions[i] == undefined) break;
-                                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;'>" + definitions[i] + "</li>"
+                                popupDictionaryWindow.innerHTML += "<hr><li style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'>" + definitions[i] + "</li>"
                             }
 							//page buttons depending on if theres more defs or not
 							if (currentPage > 1 && currentPage < maxPages) {
-								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page | Next Page--></p;";
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'><-- Prev Page | Next Page--></p;";
 							}
 							else  if (currentPage > 1){
-								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'><-- Prev Page</p;";
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'><-- Prev Page</p;";
 							}
 							else {
-								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;'>Next Page--></p>";
+								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'>Next Page--></p>";
 							}
                         }
                     }
