@@ -23,8 +23,15 @@ async function searchWord(word) {
 
     for (var i = 0; i < dictInJSON["data"].length; i++){
          if (dictInJSON["data"][i]["word"].toLowerCase() == word){
-            for (var j = 0; j < dictInJSON["data"][i]["definitions"].length; j++)
-            definitions.push(dictInJSON["data"][i]["definitions"][j]["dtxt"]);
+            for (var j = 0; j < dictInJSON["data"][i]["definitions"].length; j++) {
+				if (dictInJSON["data"][i]["definitions"][j]["ps"] != undefined){
+					dictString = "<b>[" + dictInJSON["data"][i]["definitions"][j]["ps"] + "]</b> " + dictInJSON["data"][i]["definitions"][j]["dtxt"];
+				}
+				else {
+					dictString = dictInJSON["data"][i]["definitions"][j]["dtxt"];
+				}
+				definitions.push(dictString);
+			}
         }
     }
     return definitions
@@ -88,7 +95,7 @@ function insertPopupDict() {
 			document.addEventListener('click', clickOffWindow);
 
 			//if def length > 3 then add pagination functions
-            if (definitions.length >= 3) {
+            if (definitions.length > 3) {
                     document.addEventListener('keydown', nextPage);
                     document.addEventListener('keydown', prevPage);
                     popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'>Next Page--></p>";
@@ -137,7 +144,7 @@ function insertPopupDict() {
 							else  if (currentPage > 1){
 								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'><-- Prev Page</p;";
 							}
-							else {
+							else if (currentPage == 1 && maxPages > 1) {
 								popupDictionaryWindow.innerHTML += "<hr><p style='padding: 10px;font-family: Arial, Helvetica, sans-serif;'>Next Page--></p>";
 							}
                         }
