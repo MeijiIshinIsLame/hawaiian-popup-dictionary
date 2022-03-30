@@ -3,6 +3,7 @@ const RIGHTARROW = 39;
 const LEFTARROW = 37;
 const SHIFT = 16;
 var popupDictionaryWindow;
+var text;
 
 //gets JSON dict as promise
 async function fetchJSONDict() {
@@ -43,7 +44,7 @@ function insertPopupDict() {
     if (window.getSelection) {
         //this is the highlighted text
         let selection = window.getSelection();
-        var text = selection.toString();
+        text = selection.toString();
         var range = selection.getRangeAt(0);
 
         //this is the solution to the highlight problem
@@ -53,6 +54,7 @@ function insertPopupDict() {
 		} catch {
 			newRange.setStart(selection.focusNode, selection.startOffset);
 		}
+	
 
 		popupDictionaryWindow = document.createElement('span');
         popupDictionaryWindow.id = 'hawaiian-popup-dictionary'
@@ -67,6 +69,7 @@ function insertPopupDict() {
             var currentPage = 1;
 			var defsPerPage = 3;
 			var maxPages = Math.ceil(definitions.length / defsPerPage);
+			
 			
 			//initial dict entry population
 			if (definitions.length > 0) {
@@ -152,14 +155,6 @@ function insertPopupDict() {
                 }
 		});
     }
-}
-
-function getSelectionText() {
-    var text = "";
-    if (window.getSelection) {
-        text = window.getSelection().toString();
-    }
-    return text;
 }
 
 function shiftDowned(e) {
