@@ -153,6 +153,7 @@ function insertPopupDict() {
                         }
                     }
                 }
+			return;
 		});
     }
 }
